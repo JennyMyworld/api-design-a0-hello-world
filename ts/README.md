@@ -34,9 +34,7 @@ You can find more helpful commands in the `package.json` file.
 
 ## Submission
 
-To submit your assignment, you should take a (FULL) screenshot of all your tests passing and your code passing linting. Will look something like this - 
-
-<img width="964" alt="Screenshot 2023-10-29 at 4 09 05 PM" src="https://github.com/17-625-API-Design-F23/a0/assets/31413064/a610bcfc-24f0-4d28-b2a9-163e2918428c">
+To submit your assignment, you should take a (FULL) screenshot of all your tests passing and your code passing linting. Will look something like this.
 
 You should then upload your screenshot to the assignment submission page on Gradescope.
 
