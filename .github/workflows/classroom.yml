@@ -1,0 +1,43 @@
+name: Coverage-based Autograder
+on: [push]
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Make scripts executable
+        run: |
+          chmod +x ./grade.sh
+          find . -name "auto.sh" -type f -exec chmod +x {} \;
+
+      - name: Run tests and coverage
+        id: test
+        run: |
+          ./grade.sh
+          echo "exit_code=$?" >> $GITHUB_ENV
+
+      - name: Output grade
+        run: |
+          if [ "${{ env.exit_code }}" -eq 0 ]; then
+            echo "Grade: 70/70 - Full marks! 100% coverage achieved."
+          else
+            echo "Grade: 0/70 - Coverage below 100%. Keep working!"
+          fi
