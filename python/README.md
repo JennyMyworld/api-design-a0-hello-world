@@ -38,9 +38,7 @@ pytest --cov=. --cov-fail-under=100
 
 ## Submission
 
-To submit your assignment, you should take a (FULL) screenshot of all your tests passing and your code passing linting. Will look something like this - 
-
-<img width="729" alt="Screenshot 2023-10-29 at 6 19 38 PM" src="https://github.com/17-625-API-Design-F23/a0/assets/31413064/9c582286-3aa0-4ffd-ae14-ae26734ced28">
+To submit your assignment, you should take a (FULL) screenshot of all your tests passing and your code passing linting.
 
 You should then upload your screenshot to the assignment submission page on Gradescope.
 
