@@ -10,4 +10,4 @@ sudo apt-get install npm
 npm install
 
 # run tests
-npm run test && exit 1 || exit 0
+npm run test && exit 0 || exit 1
